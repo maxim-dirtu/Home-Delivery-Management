@@ -39,8 +39,86 @@ namespace LivrariLaDomiciliu
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            if (ValidateInputs())
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                txtID.Text = string.Empty;
+                txtWeight.Text = string.Empty;
+                txtDeliveredItem.Text = string.Empty;
+                txtDestinationAddress.Text = string.Empty;
+                txtReceiverName.Text = string.Empty;
+                txtSenderName.Text = string.Empty;
+                checkIsFragile.Checked = false;
+                dtpDeliveryDate.Value = DateTime.Now;
+            }
+        }
+
+        private bool ValidateInputs()
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtID.Text))
+                {
+                    MessageBox.Show("Please enter a valid ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (!int.TryParse(txtID.Text, out _))
+                {
+                    MessageBox.Show("Please enter a valid integer value for ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtWeight.Text))
+                {
+                    MessageBox.Show("Please enter a valid weight.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (!float.TryParse(txtWeight.Text, out float weight))
+                {
+                    MessageBox.Show("Please enter a valid floating-point value for weight.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtDeliveredItem.Text))
+                {
+                    MessageBox.Show("Please enter a delivered item.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtDestinationAddress.Text))
+                {
+                    MessageBox.Show("Please enter a destination address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtReceiverName.Text))
+                {
+                    MessageBox.Show("Please enter a receiver name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtSenderName.Text))
+                {
+                    MessageBox.Show("Please enter a sender name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                // Add additional validations for other textboxes if needed
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred during validation: " + ex.Message + "\n\nStack Trace:\n" + ex.StackTrace,
+            "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         public void PopulateData(Comenzi comenzi)

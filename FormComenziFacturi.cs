@@ -88,20 +88,53 @@ namespace LivrariLaDomiciliu
 
         private void btAddWaiting_Click(object sender, EventArgs e)
         {
-            AddComenziForm addComenziForm = new AddComenziForm();
-            if (lbFinished.SelectedItem == null)
+             AddComenziForm addComenziForm = new AddComenziForm();
+    if (lbFinished.SelectedItem == null)
+    {
+        if (addComenziForm.ShowDialog() == DialogResult.OK)
+        {
+            bool isValid = false;
+            Comenzi comanda = null;
+
+            while (!isValid)
             {
-                if (addComenziForm.ShowDialog() == DialogResult.OK)
+                try
                 {
-                    Comenzi comanda = addComenziForm.GetComenzi();
-                    lbWaiting.Items.Add(comanda);
+                    comanda = addComenziForm.GetComenzi();
+                    isValid = true;
+                }
+                catch (FormatException ex)
+                {
+                    var result = MessageBox.Show("Invalid input: " + ex.Message + "\n\nDo you want to try again?",
+                        "Validation Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+                    if (result == DialogResult.No)
+                    {
+                        isValid = true; 
+                    }
+                    else
+                    {
+                        addComenziForm = new AddComenziForm();
+                        if (comanda != null)
+                        {
+                            addComenziForm.PopulateData(comanda); 
+                        }
+                        addComenziForm.ShowDialog();
+                    }
                 }
             }
-            else
+
+            if (comanda != null)
             {
-                lbWaiting.Items.Add(lbFinished.SelectedItem);
-                lbFinished.Items.Remove(lbFinished.SelectedItem);
+                lbWaiting.Items.Add(comanda);
             }
+        }
+    }
+    else
+    {
+        lbWaiting.Items.Add(lbFinished.SelectedItem);
+        lbFinished.Items.Remove(lbFinished.SelectedItem);
+    }
         }
 
         private void btAddFinished_Click(object sender, EventArgs e)
@@ -111,8 +144,40 @@ namespace LivrariLaDomiciliu
             {
                 if (addComenziForm.ShowDialog() == DialogResult.OK)
                 {
-                    Comenzi comanda = addComenziForm.GetComenzi();
-                    lbFinished.Items.Add(comanda);
+                    bool isValid = false;
+                    Comenzi comanda = null;
+                    while (!isValid)
+                    {
+                        try
+                        {
+                            comanda = addComenziForm.GetComenzi();
+                            isValid = true;
+                        }
+                        catch (FormatException ex)
+                        {
+                            var result = MessageBox.Show("Invalid input: " + ex.Message + "\n\nVrei sa incerci din nou?",
+                                "Validation Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+                            if (result == DialogResult.No)
+                            {
+                                isValid = true;
+                            }
+                            else
+                            {
+                                addComenziForm = new AddComenziForm();
+                                if (comanda != null)
+                                {
+                                    addComenziForm.PopulateData(comanda); 
+                                }
+                                addComenziForm.ShowDialog();
+                            }
+                        }
+                    }
+
+                    if (comanda != null)
+                    {
+                        lbFinished.Items.Add(comanda);
+                    }
                 }
             }
             else

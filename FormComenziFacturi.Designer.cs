@@ -108,6 +108,7 @@
             // 
             // lblInformatii
             // 
+            this.lblInformatii.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblInformatii.AutoSize = true;
             this.lblInformatii.BackColor = System.Drawing.Color.Transparent;
             this.lblInformatii.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +120,7 @@
             // 
             // lblID
             // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(33, 518);
             this.lblID.Name = "lblID";
@@ -129,6 +131,7 @@
             // 
             // lblWeight
             // 
+            this.lblWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblWeight.AutoSize = true;
             this.lblWeight.Location = new System.Drawing.Point(33, 544);
             this.lblWeight.Name = "lblWeight";
@@ -139,6 +142,7 @@
             // 
             // lblDeliveredItem
             // 
+            this.lblDeliveredItem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDeliveredItem.AutoSize = true;
             this.lblDeliveredItem.Location = new System.Drawing.Point(33, 572);
             this.lblDeliveredItem.Name = "lblDeliveredItem";
@@ -149,6 +153,7 @@
             // 
             // lblDestinationAdress
             // 
+            this.lblDestinationAdress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDestinationAdress.AutoSize = true;
             this.lblDestinationAdress.Location = new System.Drawing.Point(33, 603);
             this.lblDestinationAdress.Name = "lblDestinationAdress";
@@ -159,6 +164,7 @@
             // 
             // lblReceiverName
             // 
+            this.lblReceiverName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblReceiverName.AutoSize = true;
             this.lblReceiverName.Location = new System.Drawing.Point(344, 518);
             this.lblReceiverName.Name = "lblReceiverName";
@@ -169,6 +175,7 @@
             // 
             // lblSenderName
             // 
+            this.lblSenderName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenderName.AutoSize = true;
             this.lblSenderName.Location = new System.Drawing.Point(344, 544);
             this.lblSenderName.Name = "lblSenderName";
@@ -179,6 +186,7 @@
             // 
             // lblIsFragile
             // 
+            this.lblIsFragile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIsFragile.AutoSize = true;
             this.lblIsFragile.Location = new System.Drawing.Point(344, 572);
             this.lblIsFragile.Name = "lblIsFragile";
@@ -189,6 +197,7 @@
             // 
             // lblDeliveryDate
             // 
+            this.lblDeliveryDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDeliveryDate.AutoSize = true;
             this.lblDeliveryDate.Location = new System.Drawing.Point(344, 603);
             this.lblDeliveryDate.Name = "lblDeliveryDate";
@@ -200,6 +209,7 @@
             // 
             // btAddFinished
             // 
+            this.btAddFinished.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAddFinished.Location = new System.Drawing.Point(32, 271);
             this.btAddFinished.Name = "btAddFinished";
             this.btAddFinished.Size = new System.Drawing.Size(210, 28);
@@ -210,6 +220,7 @@
             // 
             // btEditFinished
             // 
+            this.btEditFinished.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditFinished.Location = new System.Drawing.Point(32, 314);
             this.btEditFinished.Name = "btEditFinished";
             this.btEditFinished.Size = new System.Drawing.Size(210, 28);
@@ -220,6 +231,7 @@
             // 
             // btRemoveFinished
             // 
+            this.btRemoveFinished.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btRemoveFinished.Location = new System.Drawing.Point(32, 359);
             this.btRemoveFinished.Name = "btRemoveFinished";
             this.btRemoveFinished.Size = new System.Drawing.Size(210, 28);
@@ -230,6 +242,7 @@
             // 
             // btAddWaiting
             // 
+            this.btAddWaiting.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAddWaiting.Location = new System.Drawing.Point(347, 271);
             this.btAddWaiting.Name = "btAddWaiting";
             this.btAddWaiting.Size = new System.Drawing.Size(213, 28);
@@ -240,6 +253,7 @@
             // 
             // btEditWaiting
             // 
+            this.btEditWaiting.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditWaiting.Location = new System.Drawing.Point(347, 314);
             this.btEditWaiting.Name = "btEditWaiting";
             this.btEditWaiting.Size = new System.Drawing.Size(213, 28);
@@ -250,6 +264,7 @@
             // 
             // btRemoveWaiting
             // 
+            this.btRemoveWaiting.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btRemoveWaiting.Location = new System.Drawing.Point(347, 359);
             this.btRemoveWaiting.Name = "btRemoveWaiting";
             this.btRemoveWaiting.Size = new System.Drawing.Size(213, 28);
@@ -260,6 +275,7 @@
             // 
             // btnUnselect
             // 
+            this.btnUnselect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUnselect.Location = new System.Drawing.Point(32, 438);
             this.btnUnselect.Name = "btnUnselect";
             this.btnUnselect.Size = new System.Drawing.Size(183, 23);
@@ -282,6 +298,7 @@
             // 
             // txtFactura
             // 
+            this.txtFactura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFactura.Location = new System.Drawing.Point(736, 99);
             this.txtFactura.Multiline = true;
             this.txtFactura.Name = "txtFactura";
@@ -291,6 +308,7 @@
             // 
             // btnGenerate
             // 
+            this.btnGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGenerate.Location = new System.Drawing.Point(815, 527);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(163, 23);
@@ -301,6 +319,7 @@
             // 
             // btnPrint
             // 
+            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrint.Location = new System.Drawing.Point(815, 565);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(163, 23);
