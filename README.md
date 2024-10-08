@@ -1,4 +1,5 @@
-# HomeDeliveryManagement-UniAssignment
+# Home Delivery Management
+College Assignment
 Windows Application Programming, 2nd year course, C# .NET 4.7.2.
 
 Project with the theme "Home deliveries" carried out at our discretion. Should've included classes : Orders, Clients, Invoices. 
